@@ -9,6 +9,7 @@ using LmpClient.Windows.Admin;
 using LmpClient.Windows.Chat;
 using LmpClient.Windows.CraftLibrary;
 using LmpClient.Windows.Debug;
+using LmpClient.Windows.Company;
 using LmpClient.Windows.Options;
 using LmpClient.Windows.Screenshots;
 using LmpClient.Windows.Systems;
@@ -48,7 +49,8 @@ namespace LmpClient.Windows.Status
         private void DrawTopButtons()
         {
             GUILayout.BeginHorizontal();
-
+            CompanyWindow.Singleton.Display = GUILayout.Toggle(CompanyWindow.Singleton.Display, 
+                ChatIcon, ToggleButtonStyle);
             ChatWindow.Singleton.Display = GUILayout.Toggle(ChatWindow.Singleton.Display,
                 ChatSystem.Singleton.NewMessageReceived && Flash ? ChatRedIcon : ChatIcon, ToggleButtonStyle);
             CraftLibraryWindow.Singleton.Display = GUILayout.Toggle(CraftLibraryWindow.Singleton.Display,

@@ -185,6 +185,7 @@
     <Compile Include="Harmony\Vessel_GoOffRails.cs" />
     <Compile Include="Harmony\PauseMenu_DrawRevertOptions.cs" />
     <Compile Include="Harmony\Part_Decouple.cs" />
+    <Compile Include="Localization\Structures\CompanyWindowText.cs" />
     <Compile Include="Localization\Structures\RevertDialogText.cs" />
     <Compile Include="Localization\Structures\ServerListFiltersText.cs" />
     <Compile Include="ModuleStore\Harmony\KerbalEVA_OnDeboardSeat.cs" />
@@ -328,9 +329,9 @@
     <Compile Include="Systems\FlagPlant\FlagPlantEvents.cs" />
     <Compile Include="Systems\FlagPlant\FlagPlantSystem.cs" />
     <Compile Include="Systems\Flag\FlagEvents.cs" />
-    <Compile Include="Systems\Groups\GroupMessageHandler.cs" />
-    <Compile Include="Systems\Groups\GroupMessageSender.cs" />
-    <Compile Include="Systems\Groups\GroupSystem.cs" />
+    <Compile Include="Systems\Groups\CompanyMessageHandler.cs" />
+    <Compile Include="Systems\Groups\CompanyMessageSender.cs" />
+    <Compile Include="Systems\Groups\CompanySystem.cs" />
     <Compile Include="Systems\KerbalSys\KerbalEvents.cs" />
     <Compile Include="Systems\Ping\PingSystem.cs" />
     <Compile Include="Systems\VesselDecoupleSys\VesselDecouple.cs" />
@@ -417,6 +418,8 @@
     <Compile Include="Windows\Admin\AdminWindow.cs" />
     <Compile Include="Windows\BannedParts\BannedPartsDrawer.cs" />
     <Compile Include="Windows\BannedParts\BannedPartsWindow.cs" />
+    <Compile Include="Windows\Company\CompanyDrawer.cs" />
+    <Compile Include="Windows\Company\CompanyWindow.cs" />
     <Compile Include="Windows\ServerList\ColorEffect.cs" />
     <Compile Include="Windows\Screenshots\ScreenshotDrawer.cs" />
     <Compile Include="Windows\Screenshots\ScreenshotWindow.cs" />
@@ -829,6 +832,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <PostBuildEvent Condition="'$(OS)' != 'Unix'">if /I "$(ConfigurationName)" == "Debug" call  "$(SolutionDir)Scripts\CopyToKSPDirectory.bat" $(ConfigurationName)</PostBuildEvent>
   </PropertyGroup>

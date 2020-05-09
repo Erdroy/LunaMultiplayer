@@ -1,7 +1,7 @@
 ﻿using LmpClient.Systems.CraftLibrary;
 using LmpClient.Systems.Facility;
 using LmpClient.Systems.Flag;
-using LmpClient.Systems.Groups;
+using LmpClient.Systems.Companies;
 using LmpClient.Systems.KerbalSys;
 using LmpClient.Systems.KscScene;
 using LmpClient.Systems.Lock;
@@ -60,7 +60,7 @@ namespace LmpClient.Windows.Systems
             FacilitySystem.Singleton.Enabled = GUILayout.Toggle(FacilitySystem.Singleton.Enabled, FacilitySystem.Singleton.SystemName);
             FlagSystem.Singleton.Enabled = GUILayout.Toggle(FlagSystem.Singleton.Enabled, FlagSystem.Singleton.SystemName);
             KscSceneSystem.Singleton.Enabled = GUILayout.Toggle(KscSceneSystem.Singleton.Enabled, KscSceneSystem.Singleton.SystemName);
-            GroupSystem.Singleton.Enabled = GUILayout.Toggle(GroupSystem.Singleton.Enabled, GroupSystem.Singleton.SystemName);
+            CompanySystem.Singleton.Enabled = GUILayout.Toggle(CompanySystem.Singleton.Enabled, CompanySystem.Singleton.SystemName);
             KerbalSystem.Singleton.Enabled = GUILayout.Toggle(KerbalSystem.Singleton.Enabled, KerbalSystem.Singleton.SystemName);
             LockSystem.Singleton.Enabled = GUILayout.Toggle(LockSystem.Singleton.Enabled, LockSystem.Singleton.SystemName);
             ModSystem.Singleton.Enabled = GUILayout.Toggle(ModSystem.Singleton.Enabled, ModSystem.Singleton.SystemName);

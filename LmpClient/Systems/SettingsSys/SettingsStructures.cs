@@ -22,7 +22,7 @@ namespace LmpClient.Systems.SettingsSys
         public List<ServerEntry> Servers { get; set; } = new List<ServerEntry>();
         public int InitialConnectionSyncTimeRequests { get; set; } = 10;
         public bool RevertEnabled { get; set; }
-        public int MaxGroupsPerPlayer { get; set; } = 1;
+        public int MaxCompaniesPerPlayer { get; set; } = 1;
         public bool IgnoreSyncChecks { get; set; } = false;
         public int Mtu { get; set; } = NetPeerConfiguration.kDefaultMTU;
         public bool AutoExpandMtu { get; set; } = false;

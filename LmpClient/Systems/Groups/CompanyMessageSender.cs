@@ -4,9 +4,9 @@ using LmpClient.Network;
 using LmpCommon.Message.Client;
 using LmpCommon.Message.Interface;
 
-namespace LmpClient.Systems.Groups
+namespace LmpClient.Systems.Companies
 {
-    public class GroupMessageSender : SubSystem<GroupSystem>, IMessageSender
+    public class CompanyMessageSender : SubSystem<CompanySystem>, IMessageSender
     {
         public void SendMessage(IMessageData msg)
         {

@@ -2,41 +2,41 @@
 using System.Collections.Concurrent;
 using LmpClient.Base;
 using LmpClient.Base.Interface;
-using LmpCommon.Message.Data.Groups;
+using LmpCommon.Message.Data.Companies;
 using LmpCommon.Message.Interface;
 using LmpCommon.Message.Types;
 
-namespace LmpClient.Systems.Groups
+namespace LmpClient.Systems.Companies
 {
-    public class GroupMessageHandler : SubSystem<GroupSystem>, IMessageHandler
+    public class CompanyMessageHandler : SubSystem<CompanySystem>, IMessageHandler
     {
         public ConcurrentQueue<IServerMessageBase> IncomingMessages { get; set; } = new ConcurrentQueue<IServerMessageBase>();
 
         public void HandleMessage(IServerMessageBase msg)
         {
-            if (!(msg.Data is GroupBaseMsgData msgData)) return;
+            if (!(msg.Data is CompanyBaseMsgData msgData)) return;
 
             switch (msgData.GroupMessageType)
             {
                 case GroupMessageType.ListResponse:
                     {
-                        var data = (GroupListResponseMsgData)msgData;
-                        for (var i = 0; i < data.GroupsCount; i++)
+                        var data = (CompanyListResponseMsgData)msgData;
+                        for (var i = 0; i < data.CompaniesCount; i++)
                         {
-                            System.Groups.TryAdd(data.Groups[i].Name, data.Groups[i]);
+                            System.Companies.TryAdd(data.Companies[i].Name, data.Companies[i]);
                         }
                         break;
                     }
                 case GroupMessageType.RemoveGroup:
                     {
-                        var data = (GroupRemoveMsgData)msgData;
-                        System.Groups.TryRemove(data.GroupName, out _);
+                        var data = (CompanyRemoveMsgData)msgData;
+                        System.Companies.TryRemove(data.CompanyName, out _);
                         break;
                     }
                 case GroupMessageType.GroupUpdate:
                     {
-                        var data = (GroupUpdateMsgData)msgData;
-                        System.Groups.AddOrUpdate(data.Group.Name, data.Group, (key, existingVal) => data.Group);
+                        var data = (CompanyUpdateMsgData)msgData;
+                        System.Companies.AddOrUpdate(data.Company.Name, data.Company, (key, existingVal) => data.Company);
                         break;
                     }
                 default:

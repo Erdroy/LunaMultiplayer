@@ -18,7 +18,7 @@
         Mod = 14,
         Admin = 15,
         PlayerConnection = 16,
-        Groups = 17,
+        Company = 17,
         Facility = 18,
         Screenshot = 19,
         ShareProgress = 20,

@@ -3,12 +3,12 @@ using LmpCommon.Message.Base;
 using LmpCommon.Message.Types;
 using System;
 
-namespace LmpCommon.Message.Data.Groups
+namespace LmpCommon.Message.Data.Companies
 {
-    public abstract class GroupBaseMsgData : MessageData
+    public abstract class CompanyBaseMsgData : MessageData
     {
         /// <inheritdoc />
-        internal GroupBaseMsgData() { }
+        internal CompanyBaseMsgData() { }
         public override ushort SubType => (ushort)(int)GroupMessageType;
 
         public virtual GroupMessageType GroupMessageType => throw new NotImplementedException();

@@ -91,7 +91,7 @@
     <Compile Include="Message\Data\CraftLibrary\CraftLibraryDeleteRequestMsgData.cs" />
     <Compile Include="Message\Data\Flag\FlagInfo.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Message\Data\Groups\Group.cs" />
+    <Compile Include="Message\Data\Groups\Company.cs" />
     <Compile Include="LmpVersioning.cs" />
     <Compile Include="Locks\LockDefinition.cs" />
     <Compile Include="Locks\LockQuery.cs" />
@@ -146,12 +146,12 @@
     <Compile Include="Message\Data\Flag\FlagDataMsgData.cs" />
     <Compile Include="Message\Data\Flag\FlagListRequestMsgData.cs" />
     <Compile Include="Message\Data\Flag\FlagListResponseMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupBaseMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupCreateMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupListRequestMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupListResponseMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupRemoveMsgData.cs" />
-    <Compile Include="Message\Data\Groups\GroupUpdateMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyBaseMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyCreateMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyListRequestMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyListResponseMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyRemoveMsgData.cs" />
+    <Compile Include="Message\Data\Groups\CompanyUpdateMsgData.cs" />
     <Compile Include="Message\Data\Handshake\HandshakeBaseMsgData.cs" />
     <Compile Include="Message\Data\Handshake\HandshakeReplyMsgData.cs" />
     <Compile Include="Message\Data\Handshake\HandshakeRequestMsgData.cs" />
@@ -255,7 +255,7 @@
     <Compile Include="Message\Server\CraftLibrarySrvMsg.cs" />
     <Compile Include="Message\Server\FacilitySrvMsg.cs" />
     <Compile Include="Message\Server\FlagSrvMsg.cs" />
-    <Compile Include="Message\Server\GroupSrvMsg.cs" />
+    <Compile Include="Message\Server\CompanySrvMsg.cs" />
     <Compile Include="Message\Server\HandshakeSrvMsg.cs" />
     <Compile Include="Message\Server\KerbalSrvMsg.cs" />
     <Compile Include="Message\Server\LockSrvMsg.cs" />

@@ -39,8 +39,8 @@ namespace Server.Context
                 FileHandler.FolderCreate(CraftLibrarySystem.CraftPath);
             if (!FileHandler.FolderExists(FlagSystem.FlagPath))
                 FileHandler.FolderCreate(FlagSystem.FlagPath);
-            if (!FileHandler.FolderExists(GroupSystem.GroupsPath))
-                FileHandler.FolderCreate(GroupSystem.GroupsPath);
+            if (!FileHandler.FolderExists(CompanySystem.CompaniesPath))
+                FileHandler.FolderCreate(CompanySystem.CompaniesPath);
             if (!FileHandler.FolderExists(ScreenshotSystem.ScreenshotPath))
                 FileHandler.FolderCreate(ScreenshotSystem.ScreenshotPath);
             if (!FileHandler.FolderExists(KerbalSystem.KerbalsPath))

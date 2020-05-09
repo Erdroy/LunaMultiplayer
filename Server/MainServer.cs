@@ -75,7 +75,7 @@ namespace Server
                 LunaLog.Normal($"Luna Server version: {LmpVersioning.CurrentVersion} ({Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)})");
 
                 Universe.CheckUniverse();
-                LoadSettingsAndGroups();
+                LoadSettingsAndCompanies();
                 VesselStoreSystem.LoadExistingVessels();
                 var scenariosCreated = ScenarioSystem.GenerateDefaultScenarios();
                 ScenarioStoreSystem.LoadExistingScenarios(scenariosCreated);
@@ -128,10 +128,10 @@ namespace Server
             }
         }
 
-        private static void LoadSettingsAndGroups()
+        private static void LoadSettingsAndCompanies()
         {
             LunaLog.Debug("Loading groups...");
-            GroupSystem.LoadGroups();
+            CompanySystem.LoadCompanies();
             LunaLog.Debug("Loading settings...");
             SettingsHandler.LoadSettings();
             SettingsHandler.ValidateDifficultySettings();

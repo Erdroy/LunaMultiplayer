@@ -126,7 +126,7 @@
     <Compile Include="Message\ChatMsgReader.cs" />
     <Compile Include="Message\CraftLibraryMsgReader.cs" />
     <Compile Include="Message\FlagSyncMsgReader.cs" />
-    <Compile Include="Message\GroupMsgReader.cs" />
+    <Compile Include="Message\CompanyMsgReader.cs" />
     <Compile Include="Message\HandshakeMsgReader.cs" />
     <Compile Include="Message\KerbalMsgReader.cs" />
     <Compile Include="Message\LockSystemMsgReader.cs" />
@@ -189,7 +189,7 @@
     <Compile Include="Settings\Base\SettingsBase.cs" />
     <Compile Include="System\FileHandler.cs" />
     <Compile Include="System\FlagSystem.cs" />
-    <Compile Include="System\GroupSystem.cs" />
+    <Compile Include="System\CompanySystem.cs" />
     <Compile Include="System\HandshakeSystemSender.cs" />
     <Compile Include="System\KerbalSystem.cs" />
     <Compile Include="System\LockSystem.cs" />

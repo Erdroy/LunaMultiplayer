@@ -1,20 +1,20 @@
 ﻿using Lidgren.Network;
 using LmpCommon.Enums;
-using LmpCommon.Message.Client.Base;
 using LmpCommon.Message.Data.Companies;
+using LmpCommon.Message.Server.Base;
 using LmpCommon.Message.Types;
 using System;
 using System.Collections.Generic;
 
-namespace LmpCommon.Message.Client
+namespace LmpCommon.Message.Server
 {
-    public class GroupCliMsg : CliMsgBase<CompanyBaseMsgData>
+    public class CompanySrvMsg : SrvMsgBase<CompanyBaseMsgData>
     {
         /// <inheritdoc />
-        internal GroupCliMsg() { }
+        internal CompanySrvMsg() { }
 
         /// <inheritdoc />
-        public override string ClassName { get; } = nameof(GroupCliMsg);
+        public override string ClassName { get; } = nameof(CompanySrvMsg);
 
         /// <inheritdoc />
         protected override Dictionary<ushort, Type> SubTypeDictionary { get; } = new Dictionary<ushort, Type>
@@ -26,9 +26,9 @@ namespace LmpCommon.Message.Client
             [(ushort)GroupMessageType.GroupUpdate] = typeof(CompanyUpdateMsgData)
         };
 
-        public override ClientMessageType MessageType => ClientMessageType.Company;
+        public override ServerMessageType MessageType => ServerMessageType.Company;
 
-        protected override int DefaultChannel => 17;
+        protected override int DefaultChannel => 18;
 
         public override NetDeliveryMethod NetDeliveryMethod => NetDeliveryMethod.ReliableOrdered;
     }

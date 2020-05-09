@@ -4,7 +4,7 @@ using LmpClient.Systems.Chat;
 using LmpClient.Systems.CraftLibrary;
 using LmpClient.Systems.Facility;
 using LmpClient.Systems.Flag;
-using LmpClient.Systems.Groups;
+using LmpClient.Systems.Companies;
 using LmpClient.Systems.Handshake;
 using LmpClient.Systems.KerbalSys;
 using LmpClient.Systems.Lock;
@@ -224,8 +224,8 @@ namespace LmpClient.Network
                 case ServerMessageType.Mod:
                     ModApiSystem.Singleton.EnqueueMessage(msg);
                     break;
-                case ServerMessageType.Groups:
-                    GroupSystem.Singleton.EnqueueMessage(msg);
+                case ServerMessageType.Company:
+                    CompanySystem.Singleton.EnqueueMessage(msg);
                     break;
                 case ServerMessageType.Facility:
                     FacilitySystem.Singleton.EnqueueMessage(msg);

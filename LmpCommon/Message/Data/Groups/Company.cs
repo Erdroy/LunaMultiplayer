@@ -3,10 +3,10 @@ using LmpCommon.Message.Base;
 using System;
 using System.Linq;
 
-namespace LmpCommon.Message.Data.Groups
+namespace LmpCommon.Message.Data.Companies
 {
     [Serializable]
-    public class Group
+    public class Company
     {
         public string Name;
         public string Owner;
@@ -17,9 +17,9 @@ namespace LmpCommon.Message.Data.Groups
         public int InvitedCount;
         public string[] Invited = new string[0];
 
-        public Group Clone()
+        public Company Clone()
         {
-            if (MemberwiseClone() is Group obj)
+            if (MemberwiseClone() is Company obj)
             {
                 obj.Name = Name.Clone() as string;
                 obj.Owner = Owner.Clone() as string;

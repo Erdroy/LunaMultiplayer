@@ -36,7 +36,7 @@ namespace Server.Server
             [ClientMessageType.Warp] = new WarpControlMsgReader(),
             [ClientMessageType.Lock] = new LockSystemMsgReader(),
             [ClientMessageType.Mod] = new ModDataMsgReader(),
-            [ClientMessageType.Groups] = new GroupMsgReader(),
+            [ClientMessageType.Company] = new CompanyMsgReader(),
             [ClientMessageType.Facility] = new FacilityMsgReader(),
             [ClientMessageType.Screenshot] = new ScreenshotMsgReader(),
             [ClientMessageType.ShareProgress] = new ShareProgressMsgReader(),

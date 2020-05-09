@@ -1,35 +1,35 @@
 ﻿using Lidgren.Network;
 using LmpCommon.Message.Types;
 
-namespace LmpCommon.Message.Data.Groups
+namespace LmpCommon.Message.Data.Companies
 {
-    public class GroupUpdateMsgData : GroupBaseMsgData
+    public class CompanyUpdateMsgData : CompanyBaseMsgData
     {
         /// <inheritdoc />
-        internal GroupUpdateMsgData() { }
+        internal CompanyUpdateMsgData() { }
         public override GroupMessageType GroupMessageType => GroupMessageType.GroupUpdate;
 
-        public Group Group = new Group();
+        public Company Company = new Company();
 
-        public override string ClassName { get; } = nameof(GroupUpdateMsgData);
+        public override string ClassName { get; } = nameof(CompanyUpdateMsgData);
 
         internal override void InternalSerialize(NetOutgoingMessage lidgrenMsg)
         {
             base.InternalSerialize(lidgrenMsg);
 
-            Group.Serialize(lidgrenMsg);
+            Company.Serialize(lidgrenMsg);
         }
 
         internal override void InternalDeserialize(NetIncomingMessage lidgrenMsg)
         {
             base.InternalDeserialize(lidgrenMsg);
 
-            Group.Deserialize(lidgrenMsg);
+            Company.Deserialize(lidgrenMsg);
         }
 
         internal override int InternalGetMessageSize()
         {
-            return base.InternalGetMessageSize() + Group.GetByteCount();
+            return base.InternalGetMessageSize() + Company.GetByteCount();
         }
     }
 }

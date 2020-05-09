@@ -2,35 +2,35 @@
 using LmpCommon.Message.Base;
 using LmpCommon.Message.Types;
 
-namespace LmpCommon.Message.Data.Groups
+namespace LmpCommon.Message.Data.Companies
 {
-    public class GroupRemoveMsgData : GroupBaseMsgData
+    public class CompanyRemoveMsgData : CompanyBaseMsgData
     {
         /// <inheritdoc />
-        internal GroupRemoveMsgData() { }
+        internal CompanyRemoveMsgData() { }
         public override GroupMessageType GroupMessageType => GroupMessageType.RemoveGroup;
 
-        public string GroupName;
+        public string CompanyName;
 
-        public override string ClassName { get; } = nameof(GroupRemoveMsgData);
+        public override string ClassName { get; } = nameof(CompanyRemoveMsgData);
 
         internal override void InternalSerialize(NetOutgoingMessage lidgrenMsg)
         {
             base.InternalSerialize(lidgrenMsg);
 
-            lidgrenMsg.Write(GroupName);
+            lidgrenMsg.Write(CompanyName);
         }
 
         internal override void InternalDeserialize(NetIncomingMessage lidgrenMsg)
         {
             base.InternalDeserialize(lidgrenMsg);
 
-            GroupName = lidgrenMsg.ReadString();
+            CompanyName = lidgrenMsg.ReadString();
         }
 
         internal override int InternalGetMessageSize()
         {
-            return base.InternalGetMessageSize() + GroupName.GetByteCount();
+            return base.InternalGetMessageSize() + CompanyName.GetByteCount();
         }
     }
 }
